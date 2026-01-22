@@ -144,15 +144,17 @@ export const QuizApp = () => {
           />
 
           <div className="navigation-buttons">
+            
+
+            <button className="next-btn" onClick={nextQuestion}>
+              {currentIndex === questions.length - 1 ? "Finish" : "Next"}
+            </button>
+
             {currentIndex > 0 && (
               <button className="prev-btn" onClick={previousQuestion}>
                 Previous
               </button>
             )}
-
-            <button className="next-btn" onClick={nextQuestion}>
-              {currentIndex === questions.length - 1 ? "Finish" : "Next"}
-            </button>
           </div>
         </>
       )}
